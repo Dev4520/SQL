@@ -133,11 +133,17 @@ Sol:-select * from world where name like '%c';
 Sol:-  select * from world where name like 'D%';
 
 5.write query to fetch which continent has highest gdp?
-:-
+Sol:-select max(gdp) as GDP, name from world;
 
 6.Give the total GDP of Africa?
+Sol:-select sum(gdp) as total_gdp from world where continent='Africa';
+
 7.write a query to fetch the total population for each continent?
+Sol:- select continent, sum(population) as each_continent from world group by continent;
+
 8. For each relevant continent show the number of countries that has a population of at least
 200000000?
+Sol:- select name,continent, max(population) as max_pop,count(name) as count_country from world group by continent,name;
+
 Hint: Can be solved using aggregate function
 
