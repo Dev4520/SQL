@@ -93,6 +93,51 @@ salesman_id.
 
 Sol:- select ord_no,purch_amt,ord_date,customer_id,salesman_id from orders where ord_date='2012-09-10' and salesman_id>5005 or purch_amt>1000;
 
+Q6. Create the table world with your schema and find the below queries !
 
+create table world
+(
+    name varchar(50),
+    continent varchar(50),
+    area bigint,
+    population bigint,
+    gdp bigint
+);
+select * from world;
 
+insert into world values('Afghanistan','Asia',652230,25500100,20343000000);
+insert into world values('Albania','Europe',28748,2831741,12960000000);
+insert into world values('Algeria','Africa',2381741,37100000,188681000000);
+insert into world values('Andorra','Europe',468,78115,3712000000);
+insert into world values('Angola','Africa',1246700,20609294,100990000000);
+insert into world values('Dominican Republic','Caribbean',48671,9445281,58898000000);
+insert into world values('China','Asia',9596961,1365370000,8358400000000);
+insert into world values('Colombia','South America',1141748,47662000,369813000000);
+insert into world values('Comoros','Africa',1862,743798,616000000);
+insert into world values('Denmark','Europe',43094,5634434,314889000000);
+insert into world values('Djibouti','Africa',23200,886000,1361000000);
+insert into world values('Dominica','Caribbean',751,71293,499000000);
+
+select * from world;
+
+1. Write a query to fetch which country has the highest population?
+Sol:-select max(population) as population,name from world;
+
+2.write a query to fetch the name of the country which has the least gdp?
+Sol:-select min(gdp) as gdp,name from world;
+
+3. Write a query to fetch the name of the country which ends with letter C?
+Sol:-select * from world where name like '%c';
+
+4.write a query to fetch the name of the country which starts with letter D?
+Sol:-  select * from world where name like 'D%';
+
+5.write query to fetch which continent has highest gdp?
+:-
+
+6.Give the total GDP of Africa?
+7.write a query to fetch the total population for each continent?
+8. For each relevant continent show the number of countries that has a population of at least
+200000000?
+Hint: Can be solved using aggregate function
 
