@@ -76,11 +76,22 @@ insert into sales values(110,'Mouse',250.00,12);
 
 select * from sales;
 
+4. From the following table, write a SQL query to find the items whose prices are
+higher than or equal to $550. Order the result by product price in descending, then
+product name in ascending.
 
+Return pro_name and pro_price
 
+Sol:- a)select PRO_NAME,PRO_PRICE from sales where PRO_PRICE >= 550 order by PRO_PRICE, DESC;
 
+      b)select PRO_NAME,PRO_PRICE from sales where PRO_PRICE >= 550 order by PRO_NAME asc;
 
+5. From the following table, write a SQL query to find details of all orders excluding
+those with ord_date equal to '2012-09-10' and salesman_id higher than 5005 or
+purch_amt greater than 1000.Return ord_no, purch_amt, ord_date, customer_id and
+salesman_id.
 
+Sol:- select ord_no,purch_amt,ord_date,customer_id,salesman_id from orders where ord_date='2012-09-10' and salesman_id>5005 or purch_amt>1000;
 
 
 
