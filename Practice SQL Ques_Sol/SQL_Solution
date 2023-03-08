@@ -147,3 +147,60 @@ Sol:- select name,continent, max(population) as max_pop,count(name) as count_cou
 
 Hint: Can be solved using aggregate function
 
+
+Q7. 7. Problem statement: Suppose we have two table students and course
+Sol:-
+
+create table student
+(
+    student_id int,
+    student_name varchar(60) not null,
+    city varchar(60) not null,
+    primary key(student_id)
+);
+select * from student;
+insert into student values
+(200,'John Doe','Delhi'),
+(210,'John Doe','Delhi'),
+(220,'Moon ethan','Rajasthan'),
+(230,'Jessie','Bangalore'),
+(240,'Benbrook','Bihar'),
+(250,'Ethan','Bihar'),
+(260,'Johnnie','Bangalore'),
+(270,'Goh','Delhi'),
+(380,'John Doe','Delhi'),
+(280,'Pavi','Delhi'),
+(290,'Sanvi','Rajasthan'),
+(300,'Navyaa','Bangalore'),
+(310,'Ankul','Bihar'),
+(311,'Hitanshi','Bihar'),
+(312,'Aayush','Bangalore'),
+(313,'Rian','Delhi');
+
+
+create table course
+(
+    student_id int,
+    course_name varchar(60) not null,
+    Marks int not null,
+    primary key(student_id),
+    foreign key(student_id) references student(student_id)
+);
+select * from course;
+insert into course values
+(200,'Datascience',75),
+(210,'Datascience',75),
+(220,'Dataanalyst',80),
+(230,'Dataanalyst',80),
+(240,'Dataanalyst',84),
+(250,'Dataanalyst',50),
+(260,'Datascience',80),
+(270,'Datascience',99),
+(380,'Datascience',45),
+(280,'Datascience',78),
+(290,'Dataanalyst',78),
+(300,'Computer vision',90),
+(310,'Computer vision',90),
+(311,'Computer vision',75),
+(312,'Computer vision',39);
+select * from course;
