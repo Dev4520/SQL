@@ -173,7 +173,60 @@ select * from course;
 drop table course;
 select * from course;
 
+create table course
+(
+    student_id int,
+    course_name varchar(60) not null,
+    Marks int not null,
+    primary key(student_id),
+    foreign key(student_id) references students(student_id)
+);
+select * from course;
+select * from course;
+drop table course;
+select * from course;
 
+insert into students values
+(200,'John Doe','Delhi'),
+(210,'John Doe','Delhi'),
+(220,'Moon ethan', 'Delhi'),
+(230,'jessie','Banglore'),
+(240,'Benbrook','Bihar'),
+(250,'Ethan','Delhi'),
+(260,'Johnnie','Bangalore'),
+(270,'Goa','Delhi'),
+(380,'John Doe','Delhi'),
+(280,'Pavi','Delhi'),
+(290,'Sanvi','Rajasthan'),
+(300,'Navyaa','Banglore'),
+(310,'Ankul','Bihar'),
+(311,'Hitanshi','Banglore'),
+(312,'Aayush','Bihar'),
+(313,'Rian','Delhi');
+
+select * from students;
+set foreign_key_checks=0;
+truncate table students;
+
+
+insert into course values
+(200,'Datascience',75),
+(210,'Datascience',75),
+(220,'Dataanalyst',80),
+(230,'Dataanalyst',80),
+(240,'Dataanalyst',84),
+(250,'Dataanalyst',50),
+(260,'Datascience',80),
+(270,'Datascience',99),
+(380,'Datascience',45),
+(280,'Datascience',78),
+(290,'Dataanalyst',78),
+(300,'Computer vision',90),
+(310,'Computer vision',90),
+(311,'Computer vision',75),
+(312,'Computer vision',39);
+
+select * from course;
 
 
 
