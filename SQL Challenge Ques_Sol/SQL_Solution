@@ -229,7 +229,22 @@ insert into course values
 select * from course;
 
 
-
+Questions :
+q1. write a query to fetch the names of the students having maximum marks in each
+course?
+q2. write a query to fetch the names of the students having 3th highest marks from each
+course?
+q3. write a query to fetch the names of the students having minimum marks in each course?
+q4. write a query to fetch the names of the students having 4th least marks from each
+course?
+q5. write a query to fetch the city name of the students who have 2nd highest marks?
+q6. write a query to fetch the count of each city?
+q7. write a query to fetch the names of the students who are from the same city?
+q8.write a query to fetch the names of students starting with 'A'?
+q9.write a query to fetch the count of students' names having the same marks in each
+course?
+q10.write a query to fetch the count of students from each city?
+Hint : You must use Joins, Windows functions and CTE
 
 
 
